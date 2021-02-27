@@ -1,0 +1,12 @@
+body {
+  background-color: #000;
+}
+
+.logo-container {
+  max-height: 100px;
+  width: auto;
+}
+
+.gf-text {
+  display: block;
+}
