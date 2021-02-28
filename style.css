@@ -10,7 +10,7 @@ body {
 }
 
 .logo {
-  width: 200px;
+  width: 150px;
 }
 .flow-text {
   font-weight: 500;
@@ -26,8 +26,8 @@ body {
 
 .master-container {
   position: absolute;
-  top: 50vh;
-  left: 50vh;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   margin-left: auto;
   margin-right: auto;
@@ -36,19 +36,6 @@ body,
 html {
   padding: 0;
   margin: 0;
-}
-.slider {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  width: 150px;
-  color: white;
-  font-family: sans-serif;
-  text-align: right;
-}
-.slider input {
-  width: 100%;
-  margin-bottom: 5px;
 }
 
 html,
@@ -60,20 +47,23 @@ body {
 
 .gr-text {
   text-transform: uppercase;
-  letter-spacing: 15px;
+  letter-spacing: 7px;
 }
 
 @keyframes logo-anim {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
   }
   100% {
-    transform: rotate(360deg);
+    transform: scale(1);
   }
 }
 
 .logo {
-  animation: logo-anim 2s infinite;
+  animation: logo-anim 5s infinite;
 }
 
 .input-mail {

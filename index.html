@@ -24,20 +24,50 @@
 
     <div class="master-container">
       <div class="all-container">
-        <div class="logo-container">
-          <img src="images/logo.png" alt="" class="logo" />
+        <div class="logo-container logo">
+          <img src="images/logo.svg" alt="" class="logo" />
+
+
+          
+            
+
+            
+
         </div>
         <h1 class="gf-text">Game<span class="flow-text">Flow</span></h1>
         <p class="gr-text">Gaming redefined</p>
-        <div class="mail">
-          <input type="text" name="" id="" class="input-mail" placeholder="Get in the know">
-          <button class="btn-mail">
+        <form name="submit-to-google-sheet" class="mail">
+          <input type="text" name="" id="" class="input-mail" placeholder="Get in the know" name="email" type="email" required>
+          <button type="submit" class="btn-mail">
             <img src="images/tick.svg" alt="" class="tick">
           </button>
-        </div>
+        </form>
         
         </div>
     </div>
+
+
+
+
+    <form name="submit-to-google-sheet">
+      <input name="email" type="email" placeholder="Email" required>
+      <button type="submit">Send</button>
+    </form>
+    
+    <script>
+      const scriptURL = '<SCRIPT URL>'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+
+
 
   
     <script src="app.js"></script>
