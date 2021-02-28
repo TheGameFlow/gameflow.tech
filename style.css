@@ -1,5 +1,5 @@
 body {
-  background-color: #000;
+  background-color: #ccc;
   font-family: Inter, Arial, Helvetica, sans-serif;
   color: #fff;
 }
@@ -80,7 +80,7 @@ body {
 }
 
 .btn-mail {
-  background-color: rgb(55, 70, 207);
+  background-color: royalblue;
   border: none;
   /* height: 27px;
   width: 27px; */

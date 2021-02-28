@@ -75,7 +75,7 @@ function setupStars() {
 
 // redraw the frame
 function updateStars() {
-  starsCtx.fillStyle = "black";
+  starsCtx.fillStyle = "#000";
   starsCtx.fillRect(0, 0, stars.width, stars.height);
   starsElements.forEach(function (s) {
     s.show();
