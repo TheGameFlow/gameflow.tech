@@ -51,7 +51,7 @@ function Star() {
         : 1;
 
     starsCtx.beginPath();
-    starsCtx.fillStyle = "rgba(255, 255, 255, " + opacity + ")";
+    starsCtx.fillStyle = "rgba(130, 130, 130, " + opacity + ")";
     starsCtx.arc(x, y, rad, 0, Math.PI * 2);
     starsCtx.fill();
   };
