@@ -83,9 +83,19 @@ body {
   padding: 10px 20px;
   outline: none;
   color: #eee;
+  box-sizing: border-box;
 }
 
 .btn-mail {
   background-color: royalblue;
   border: none;
+  /* height: 27px;
+  width: 27px; */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.tick {
+  max-width: 60%;
+  max-height: 60%;
 }
