@@ -13,7 +13,7 @@ body {
   width: 150px;
 }
 .flow-text {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .all-container {
@@ -72,9 +72,10 @@ body {
   margin-top: 30px;
   background-color: #333;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 15px;
+
   outline: none;
-  color: #eee;
+  color: rgb(175, 175, 175);
   box-sizing: border-box;
   border-radius: 5px 0px 0px 5px;
 }
@@ -85,10 +86,16 @@ body {
   /* height: 27px;
   width: 27px; */
   padding: 10px;
+
   box-sizing: border-box;
   border-radius: 0px 5px 5px 0px;
   transform: translateX(-6px);
   outline: none;
+}
+
+.btn-mail:hover {
+  background-color: blue;
+  transition: 2s;
 }
 
 .tick {
