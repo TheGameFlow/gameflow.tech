@@ -6,7 +6,9 @@ body {
 
 .gf-text {
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: -3px;
+  font-size: 3rem;
+  padding-top: 20px;
 }
 
 .logo {
@@ -46,10 +48,16 @@ body {
   overflow: hidden;
 }
 
+h1,
+p {
+  padding: 0;
+  margin: 0;
+}
 .gr-text {
   text-transform: uppercase;
-  letter-spacing: 7px;
+  letter-spacing: 5px;
   text-align: center;
+  font-size: 0.7rem;
 }
 
 @keyframes logo-anim {
