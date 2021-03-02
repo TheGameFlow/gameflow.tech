@@ -36,32 +36,22 @@
         </div>
         <h1 class="gf-text">Game<span class="flow-text">Flow</span></h1>
         <p class="gr-text">Gaming redefined</p>
+
+        
         <form name="submit-to-google-sheet" class="mail">
           <input class="input-mail" placeholder="Get in the know" name="email" type="email" required>
-          <button type="submit" class="btn-mail">
-            <img src="images/tick.svg" alt="" class="tick">
+          <button type="submit" class="btn-mail" id="submit-button">
+            <img src="images/arrow.svg" alt="" class="tick" id="btn-icon">
           </button>
         </form>
         
         </div>
     </div>
 
+    <p class="cs-text gr-text">Dropping Soon!</p>
 
 
 
-
-    
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbysfjU3xrA5BpMImWSFPjn9eygcq1Vo_Wjia6ikYQxX_v1fMqxIkabK/exec';
-      const form = document.forms['submit-to-google-sheet']
-    
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
 
 
 

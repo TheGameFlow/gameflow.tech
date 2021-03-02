@@ -89,12 +89,12 @@ p {
 }
 
 .btn-mail {
-  background-color: royalblue;
+  background-color: rgb(64, 104, 221);
   border: none;
   /* height: 27px;
   width: 27px; */
   padding: 10px;
-
+  color: #fff;
   box-sizing: border-box;
   border-radius: 0px 5px 5px 0px;
   transform: translateX(-6px);
@@ -102,7 +102,7 @@ p {
 }
 
 .btn-mail:hover {
-  background-color: blue;
+  background-color: rgb(2, 2, 236);
   transition: 2s;
 }
 
@@ -113,4 +113,27 @@ p {
 
 .mail {
   display: inline;
+}
+
+body {
+  position: relative;
+}
+
+.cs-text {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  animation: loader 1s infinite;
 }

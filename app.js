@@ -1,3 +1,38 @@
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbysfjU3xrA5BpMImWSFPjn9eygcq1Vo_Wjia6ikYQxX_v1fMqxIkabK/exec";
+const form = document.forms["submit-to-google-sheet"];
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  loader();
+
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      successGreen();
+    })
+    .catch((error) => {
+      failedRed();
+    });
+});
+
+function successGreen() {
+  document.getElementById("submit-button").style.backgroundColor = "green";
+
+  document.getElementById("btn-icon").src = "images/tick.svg";
+  document.getElementById("btn-icon").classList = "tick";
+}
+
+function failedRed() {
+  document.getElementById("submit-button").style.backgroundColor = "red";
+  document.getElementById("submit-button").innerHTML = "!";
+}
+
+function loader() {
+  document.getElementById("btn-icon").src = "images/loader.svg";
+  document.getElementById("btn-icon").classList = "tick loader";
+}
+
 // DOM selectors
 const stars = document.getElementById("stars");
 const starsCtx = stars.getContext("2d");
