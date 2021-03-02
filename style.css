@@ -1,7 +1,10 @@
 body {
-  background-color: #ccc;
   font-family: Inter, Arial, Helvetica, sans-serif;
   color: #fff;
+}
+
+.logo {
+  width: 150px;
 }
 
 .gf-text {
@@ -11,9 +14,6 @@ body {
   padding-top: 20px;
 }
 
-.logo {
-  width: 150px;
-}
 .flow-text {
   font-weight: 400;
 }
@@ -23,7 +23,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 10;
 }
 
 .master-container {
@@ -35,16 +34,11 @@ body {
   margin-right: auto;
   min-width: 100%;
 }
-body,
-html {
-  padding: 0;
-  margin: 0;
-}
 
 html,
 body {
   margin: 0;
-  height: 100%;
+
   overflow: hidden;
 }
 
@@ -76,12 +70,16 @@ p {
   animation: logo-anim 5s infinite;
 }
 
+.mail {
+  display: flex;
+}
 .input-mail {
   margin-top: 30px;
   background-color: #333;
   border: none;
   padding: 10px 15px;
-
+  margin-right: -6px;
+  max-width: 200%;
   outline: none;
   color: rgb(175, 175, 175);
   box-sizing: border-box;
@@ -89,15 +87,14 @@ p {
 }
 
 .btn-mail {
-  background-color: rgb(64, 104, 221);
+  background-color: rgb(46, 94, 236);
   border: none;
-  /* height: 27px;
-  width: 27px; */
+
   padding: 10px;
   color: #fff;
   box-sizing: border-box;
   border-radius: 0px 5px 5px 0px;
-  transform: translateX(-6px);
+
   outline: none;
 }
 
@@ -115,13 +112,9 @@ p {
   display: inline;
 }
 
-body {
-  position: relative;
-}
-
 .cs-text {
   position: absolute;
-  bottom: 5%;
+  bottom: 7%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -136,4 +129,8 @@ body {
 }
 .loader {
   animation: loader 1s infinite;
+}
+
+.icon-hid {
+  visibility: hidden;
 }

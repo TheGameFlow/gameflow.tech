@@ -2,6 +2,36 @@ const scriptURL =
   "https://script.google.com/macros/s/AKfycbysfjU3xrA5BpMImWSFPjn9eygcq1Vo_Wjia6ikYQxX_v1fMqxIkabK/exec";
 const form = document.forms["submit-to-google-sheet"];
 
+function gId(id) {
+  return document.getElementById(id);
+}
+
+function changeBg(id, color) {
+  gId(id).style.backgroundColor = color;
+}
+
+function successGreen() {
+  changeBg("submit-button", "green");
+
+  gId("btn-icon").src = "images/tick.svg";
+  gId("btn-icon").classList = "tick";
+}
+
+function failedRed() {
+  changeBg("submit-button", "red");
+  gId("submit-button").innerHTML = "!";
+}
+
+function loader() {
+  gId("btn-icon").src = "images/loader.svg";
+  gId("btn-icon").classList = "tick loader";
+}
+function initialButtonState() {
+  gId("btn-icon").src = "images/arrow.svg";
+  changeBg("submit-button", "blue");
+  gId("btn-icon").classList = "tick";
+}
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -10,31 +40,15 @@ form.addEventListener("submit", (e) => {
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
       successGreen();
+      setTimeout(initialButtonState, 3000);
     })
     .catch((error) => {
       failedRed();
     });
 });
 
-function successGreen() {
-  document.getElementById("submit-button").style.backgroundColor = "green";
-
-  document.getElementById("btn-icon").src = "images/tick.svg";
-  document.getElementById("btn-icon").classList = "tick";
-}
-
-function failedRed() {
-  document.getElementById("submit-button").style.backgroundColor = "red";
-  document.getElementById("submit-button").innerHTML = "!";
-}
-
-function loader() {
-  document.getElementById("btn-icon").src = "images/loader.svg";
-  document.getElementById("btn-icon").classList = "tick loader";
-}
-
 // DOM selectors
-const stars = document.getElementById("stars");
+const stars = gId("stars");
 const starsCtx = stars.getContext("2d");
 const slider = document.querySelector(".slider input");
 const output = document.querySelector("#speed");
