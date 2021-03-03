@@ -11,7 +11,7 @@ function changeBg(id, color) {
 }
 
 function successGreen() {
-  changeBg("submit-button", "green");
+  changeBg("submit-button", "rgb(0, 189, 0)");
 
   gId("btn-icon").src = "images/tick.svg";
   gId("btn-icon").classList = "tick";
@@ -40,6 +40,7 @@ form.addEventListener("submit", (e) => {
   fetch(scriptURL, { method: "POST", body: new FormData(form) })
     .then((response) => {
       successGreen();
+
       setTimeout(initialButtonState, 3000);
     })
     .catch((error) => {
