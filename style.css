@@ -130,7 +130,3 @@ p {
 .loader {
   animation: loader 1s infinite;
 }
-
-.icon-hid {
-  visibility: hidden;
-}
