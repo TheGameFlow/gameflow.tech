@@ -1,7 +1,10 @@
+// ----------------- The JS behind the form (using appscript) ---------------
+
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbysfjU3xrA5BpMImWSFPjn9eygcq1Vo_Wjia6ikYQxX_v1fMqxIkabK/exec";
 const form = document.forms["submit-to-google-sheet"];
 
+// Reusable functions
 function gId(id) {
   return document.getElementById(id);
 }
@@ -10,6 +13,7 @@ function changeBg(id, color) {
   gId(id).style.backgroundColor = color;
 }
 
+// Style changers
 function successGreen() {
   changeBg("submit-button", "rgb(0, 189, 0)");
 
@@ -32,6 +36,8 @@ function initialButtonState() {
   gId("btn-icon").classList = "tick";
 }
 
+// Form submission using Fetch API and promises
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -47,6 +53,8 @@ form.addEventListener("submit", (e) => {
       failedRed();
     });
 });
+
+// --------- Starry background animation code ----------
 
 // DOM selectors
 const stars = gId("stars");
